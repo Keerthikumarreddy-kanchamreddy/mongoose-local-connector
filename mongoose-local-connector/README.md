@@ -28,18 +28,17 @@ Here's a minimal setup to connect to your local MongoDB instance:
 ```bash
 const { connectToMongoDB, getConnectionStatus } = require('mongoose-local-connector');
 
-(async () => {
-  try {
+connectUsingMongoose = async()=>{
+try{
     await connectToMongoDB({
       dbName: 'myDatabase', // Name of the database
       host: '127.0.0.1',    // MongoDB host (default: 127.0.0.1)
       port: 27017           // MongoDB port (default: 27017)
     });
     console.log('Connection Status:', getConnectionStatus()); // 'connected'
-  } catch (error) {
-    console.error('Connection failed:', error.message);
-  }
-})();
+}catch(err){
+    console.log(err)
+}}
 ```
 
 ### Using Environment Variables
@@ -59,14 +58,13 @@ MONGO_DB_NAME=myDatabase
 ```bash
 const { connectToMongoDB, getConnectionStatus } = require('mongoose-local-connector');
 
-(async () => {
-  try {
+connectUsingMongoose = async()=>{
+try{
     await connectToMongoDB();
-    console.log('Connected using environment variables!');
-  } catch (error) {
-    console.error('Connection failed:', error.message);
-  }
-})();
+    console.log('Connection Status:', getConnectionStatus()); // 'connected'
+}catch(err){
+    console.log(err)
+}}
 ```
 
 ### Connection Status
@@ -105,6 +103,7 @@ If using a .env file, install the dotenv package and call require('dotenv').conf
 ## License
 
 This project is licensed under the MIT License.
+[MIT](https://github.com/Keerthikumarreddy-kanchamreddy/mongoose-local-connector/blob/main/mongoose-local-connector/LICENSE)
 
 ## Contributing
 
@@ -113,3 +112,4 @@ Contributions are welcome! If you encounter a bug or have a feature request, ple
 ## Support
 
 If you have any questions or need help, feel free to reach out by creating an issue or discussion on the GitHub repository.
+[mongoose-local-connector](https://github.com/Keerthikumarreddy-kanchamreddy/mongoose-local-connector/tree/main)
