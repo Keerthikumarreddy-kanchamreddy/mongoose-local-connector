@@ -1,0 +1,19 @@
+{
+  "name": "mongoose-local-connector",
+  "version": "1.1.1",
+  "description": "A simple utility to connect to mongoose on a local machine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongoose",
+    "connection",
+    "database"
+  ],
+  "author": "Keerthi kumar reddy Kancham reddy",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^8.8.4"
+  }
+}
